@@ -2,6 +2,7 @@ import * as React from "react"
 import { theme } from "../theme"
 import styled from "styled-components"
 
+// Types
 export type Props = {
   /** Disable Toggle */
   disabled?: boolean
@@ -13,6 +14,15 @@ export type Props = {
   onClick?: React.MouseEventHandler<HTMLDivElement>
 }
 
+// Component
+export const Toggle: React.FC<Props> = ({ disabled, active, onClick }) => (
+  <StyledToggle
+    className={`${disabled ? "disabled" : ""} ${active ? "active" : ""}`}
+    onClick={onClick}
+  />
+)
+
+// Styling
 const StyledToggle = styled.span`
   background: ${theme.color.paneBgDark};
   border-radius: 100px;
@@ -54,10 +64,3 @@ const StyledToggle = styled.span`
     opacity: 0.5;
   }
 `
-
-export const Toggle: React.FC<Props> = ({ disabled, active, onClick }) => (
-  <StyledToggle
-    className={`${disabled ? "disabled" : ""} ${active ? "active" : ""}`}
-    onClick={onClick}
-  />
-)

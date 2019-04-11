@@ -2,6 +2,7 @@ import * as React from "react"
 import { theme } from "../theme"
 import styled from "styled-components"
 
+// Types
 export type Props = {
   /** Optional string that can be used to set the button value */
   text?: string
@@ -16,6 +17,24 @@ export type Props = {
   kind?: "default" | "primary" | "danger"
 }
 
+// Component
+export const Button: React.FC<Props> = ({
+  text,
+  fluid,
+  disabled,
+  children,
+  kind
+}) => (
+  <StyledButton
+    className={`${fluid ? "fluid" : ""} ${disabled ? "disabled" : ""} ${
+      kind ? kind : ""
+    }`}
+  >
+    {text || children}
+  </StyledButton>
+)
+
+// Styles
 const StyledButton = styled.button`
   background: ${theme.color.paneBg};
   border-radius: 4px;
@@ -85,19 +104,3 @@ const StyledButton = styled.button`
       inset 0px 0px 0px 1px hsla(0, 0%, 0%, 0.05);
   }
 `
-
-export const Button: React.FC<Props> = ({
-  text,
-  fluid,
-  disabled,
-  children,
-  kind
-}) => (
-  <StyledButton
-    className={`${fluid ? "fluid" : ""} ${disabled ? "disabled" : ""} ${
-      kind ? kind : ""
-    }`}
-  >
-    {text || children}
-  </StyledButton>
-)

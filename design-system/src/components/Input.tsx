@@ -2,6 +2,7 @@ import * as React from "react"
 import { theme } from "../theme"
 import styled from "styled-components"
 
+// Types
 export type Props = {
   /** Input text */
   value?: string
@@ -19,6 +20,24 @@ export type Props = {
   onChange?: any
 }
 
+// Component
+export const Input: React.FC<Props> = ({
+  value,
+  placeholder,
+  error,
+  disabled,
+  onChange
+}) => (
+  <StyledInput
+    type="text"
+    value={value}
+    placeholder={placeholder}
+    className={`${error ? "error" : ""} ${disabled ? "disabled" : ""}`}
+    onChange={onChange}
+  />
+)
+
+// Styles
 const StyledInput = styled.input`
   background: ${theme.color.paneBgDark};
   border-radius: 4px;
@@ -64,19 +83,3 @@ const StyledInput = styled.input`
     opacity: 0.5;
   }
 `
-
-export const Input: React.FC<Props> = ({
-  value,
-  placeholder,
-  error,
-  disabled,
-  onChange
-}) => (
-  <StyledInput
-    type="text"
-    value={value}
-    placeholder={placeholder}
-    className={`${error ? "error" : ""} ${disabled ? "disabled" : ""}`}
-    onChange={onChange}
-  />
-)
