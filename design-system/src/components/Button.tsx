@@ -17,7 +17,7 @@ export type Props = {
 }
 
 const StyledButton = styled.button`
-  background: ${theme.color.B0};
+  background: ${theme.color.paneBg};
   border-radius: 4px;
   border: none;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
@@ -28,18 +28,18 @@ const StyledButton = styled.button`
   line-height: 1.1;
   padding: ${theme.space[3]};
   text-align: center;
-  color: ${theme.color.B6};
+  color: ${theme.color.body};
   margin: 0;
   &:hover {
     transition: box-shadow 0.2s, color 0.2s, background-color 0.2s;
-    color: ${theme.color.B5};
+    color: ${theme.color.bodyLight};
     box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
       0px 1px 1px 0px rgba(0, 0, 0, 0.05);
   }
   &:active {
     transition: none;
-    color: ${theme.color.B4};
-    background-color: ${theme.color.B1};
+    color: ${theme.color.bodyLighter};
+    background-color: ${theme.color.paneBgDark};
     box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.05),
       inset 0px 0px 0px 1px hsla(0, 0%, 0%, 0.05);
   }
@@ -47,7 +47,7 @@ const StyledButton = styled.button`
     width: 100%;
   }
   &.disabled {
-    color: ${theme.color.B3};
+    color: ${theme.color.bodyLightest};
     pointer-events: none;
   }
 

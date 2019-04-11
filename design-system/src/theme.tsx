@@ -1,4 +1,13 @@
 export enum Color {
+  /** Used for general pane elements like inputs & buttons */
+  paneBg = "paneBg",
+
+  /** Used for general pane elements like inputs & buttons */
+  paneBgDark = "paneBgDark",
+
+  /** Used for general pane elements like inputs & buttons */
+  paneBorder = "paneBorder",
+
   /** Primary brand color */
   Primary = "primary",
 
@@ -14,43 +23,38 @@ export enum Color {
   /** Used for errors and breaking changes */
   DangerDark = "dangerDark",
 
-  /** Brightnes level 0 on a scale from 0-6 */
-  B0 = "B0",
+  /** Used for errors and breaking changes */
+  DangerLight = "dangerLight",
 
-  /** Brightnes level 1 on a scale from 0-6 */
-  B1 = "B1",
+  /** Used for default body text */
+  Body = "body",
 
-  /** Brightnes level 2 on a scale from 0-6 */
-  B2 = "B2",
+  /** Used for light body text */
+  BodyLight = "bodyLight",
 
-  /** Brightnes level 3 on a scale from 0-6 */
-  B3 = "B3",
+  /** Used for lighter body text */
+  BodyLighter = "bodyLighter",
 
-  /** Brightnes level 4 on a scale from 0-6 */
-  B4 = "B4",
-
-  /** Brightnes level 5 on a scale from 0-6 */
-  B5 = "B5",
-
-  /** Brightnes level 6 on a scale from 0-6 */
-  B6 = "B6"
+  /** Used for lightest body text */
+  BodyLightest = "bodyLightest"
 }
 
 type Colors = { [key in Color]: string }
 
 const color: Colors = {
+  paneBg: "#FFF",
+  paneBgDark: "#FDFDFD",
+  paneBorder: "rgba(0,0,0,.1)",
   primary: "#75C",
   primaryDark: "#74C",
   primaryLight: "#EEF",
   danger: "#F44",
   dangerDark: "#F34",
-  B0: "#FFF",
-  B1: "#FBFBFB",
-  B2: "#EEE",
-  B3: "#AAA",
-  B4: "#666",
-  B5: "#444",
-  B6: "#222"
+  dangerLight: "#FDD",
+  body: "#222",
+  bodyLight: "#444",
+  bodyLighter: "#666",
+  bodyLightest: "#AAA"
 }
 
 const size: string[] = ["0", "13px", "15px", "18px", "20px"]
@@ -58,8 +62,6 @@ const size: string[] = ["0", "13px", "15px", "18px", "20px"]
 const space: string[] = ["0", "4px", "8px", "16px", "32px"]
 
 const font = "-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif"
-
-const border = `1px solid ${color.B2}`
 
 type Theme = {
   /** Brand colors */
@@ -73,13 +75,9 @@ type Theme = {
 
   /** Spacing sizes used for margins and paddings */
   space: string[]
-
-  /** Default border style */
-  border: string
 }
 
 export const theme: Theme = {
-  border,
   color,
   font,
   size,
