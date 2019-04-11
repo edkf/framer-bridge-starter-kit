@@ -53,7 +53,7 @@ const color: Colors = {
   B6: "#222"
 }
 
-const size: string[] = ["0", "12px", "16px", "18px", "20px"]
+const size: string[] = ["0", "13px", "15px", "18px", "20px"]
 
 const space: string[] = ["0", "4px", "8px", "16px", "32px"]
 

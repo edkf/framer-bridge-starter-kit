@@ -29,6 +29,7 @@ const StyledButton = styled.button`
   padding: ${theme.space[3]};
   text-align: center;
   color: ${theme.color.B6};
+  margin: 0;
   &:hover {
     transition: box-shadow 0.2s, color 0.2s, background-color 0.2s;
     color: ${theme.color.B5};

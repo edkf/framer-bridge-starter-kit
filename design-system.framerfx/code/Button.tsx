@@ -3,6 +3,7 @@ import * as System from "../../design-system/src"
 import { ControlType, PropertyControls } from "framer"
 
 type Props = System.ButtonProps & {
+  width: number
   height: number
 }
 
@@ -12,10 +13,11 @@ export class Button extends React.Component<Props> {
   }
 
   static defaultProps: Props = {
-    height: 52,
-    text: "Hello World!",
+    width: 150,
+    height: 48,
+    disabled: false,
     fluid: true,
-    disabled: false
+    text: "Button"
   }
 
   static propertyControls: PropertyControls<Props> = {
