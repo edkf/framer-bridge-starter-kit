@@ -7,9 +7,27 @@ type Props = System.InputProps & {
   height: number
 }
 
-export class Input extends React.Component<Props> {
+type State = {
+  value?: string
+}
+
+export class Input extends React.Component<Props, State> {
+  state = {
+    value: null
+  }
+
+  handleChange = event => {
+    this.setState({ value: event.target.value })
+  }
+
   render() {
-    return <System.Input {...this.props} />
+    return (
+      <System.Input
+        {...this.props}
+        value={this.state.value}
+        onChange={this.handleChange}
+      />
+    )
   }
 
   static defaultProps: Props = {
@@ -17,12 +35,10 @@ export class Input extends React.Component<Props> {
     height: 50,
     disabled: false,
     error: false,
-    placeholder: "Email",
-    text: null
+    placeholder: "Email"
   }
 
   static propertyControls: PropertyControls<Props> = {
-    text: { type: ControlType.String, title: "Text" },
     placeholder: { type: ControlType.String, title: "Placeholder" },
     disabled: { type: ControlType.Boolean, title: "Disabled" },
     error: { type: ControlType.Boolean, title: "Error" }

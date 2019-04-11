@@ -527,8 +527,7 @@
             "codeComponentProps" : {
               "disabled" : false,
               "error" : false,
-              "placeholder" : "Email",
-              "text" : ""
+              "placeholder" : "Email"
             },
             "codeOverrideEnabled" : false,
             "constraintsLocked" : true,

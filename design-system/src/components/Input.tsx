@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 export type Props = {
   /** Input text */
-  text?: string
+  value?: string
 
   /** Placeholder text */
   placeholder?: string
@@ -14,6 +14,9 @@ export type Props = {
 
   /** Show error state */
   error?: boolean
+
+  /** Change handler */
+  onChange?: any
 }
 
 const StyledInput = styled.input`
@@ -63,15 +66,17 @@ const StyledInput = styled.input`
 `
 
 export const Input: React.FC<Props> = ({
-  text,
+  value,
   placeholder,
   error,
-  disabled
+  disabled,
+  onChange
 }) => (
   <StyledInput
     type="text"
-    value={text}
+    value={value}
     placeholder={placeholder}
     className={`${error ? "error" : ""} ${disabled ? "disabled" : ""}`}
+    onChange={onChange}
   />
 )
