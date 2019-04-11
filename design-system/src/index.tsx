@@ -1,3 +1,1 @@
-import * as React from "react"
-
-export const Test = () => <div>Test</div>
+export { Button, Props as ButtonProps } from "./components/Button"
