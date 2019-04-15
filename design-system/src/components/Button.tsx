@@ -40,18 +40,18 @@ const StyledButton = styled.button`
   border-radius: 4px;
   border: none;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+  color: ${theme.color.body};
   font-family: ${theme.font};
   font-size: ${theme.size[2]};
   font-weight: 600;
   letter-spacing: -0.2px;
   line-height: 1.1;
+  margin: 0;
   padding: ${theme.space[3]};
   text-align: center;
-  color: ${theme.color.body};
-  margin: 0;
   &:hover {
-    transition: box-shadow 0.2s, color 0.2s, background-color 0.2s;
     color: ${theme.color.bodyLight};
+    transition: box-shadow 0.2s, color 0.2s, background-color 0.2s;
     box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
       0px 1px 1px 0px rgba(0, 0, 0, 0.05);
   }
