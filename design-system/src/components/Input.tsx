@@ -46,7 +46,7 @@ const StyledInput = styled.input`
     inset 0px 0px 0px 1px ${theme.color.paneBorder};
   color: ${theme.color.body};
   font-family: ${theme.font};
-  font-size: ${theme.size[2]};
+  font-size: 15px;
   font-weight: 500;
   margin: 0;
   outline: 0;

@@ -30,8 +30,6 @@ const color: Colors = {
   bodyLightest: "#AAA"
 }
 
-const size: string[] = ["0", "13px", "15px", "18px", "20px"]
-
 const space: string[] = ["0", "4px", "8px", "16px", "32px"]
 
 const font = "-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif"
@@ -39,6 +37,5 @@ const font = "-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif"
 export const theme = {
   color,
   font,
-  size,
   space
 }

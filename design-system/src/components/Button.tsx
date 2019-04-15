@@ -42,7 +42,7 @@ const StyledButton = styled.button`
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
   color: ${theme.color.body};
   font-family: ${theme.font};
-  font-size: ${theme.size[2]};
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: -0.2px;
   line-height: 1.1;
