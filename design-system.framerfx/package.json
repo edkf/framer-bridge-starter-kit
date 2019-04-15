@@ -1,19 +1,22 @@
 {
-	"main": "dist/index.js",
-	"license": "MIT",
-	"devDependencies": {
-		"@types/react": "^16.4.16"
-	},
-	"peerDependencies": {
-		"framer": "^0.10",
-		"react": "^16.3.0",
-		"react-dom": "^16.3.0"
-	},
-	"framer": {
-		"id": "3ff47ca2-c5cd-482a-a577-f661c122b388"
-	},
-	"author": "Floris Verloop",
-	"dependencies": {
-		"styled-components": "^4.2.0"
-	}
+  "main": "dist/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^16.4.16"
+  },
+  "peerDependencies": {
+    "framer": "^0.10",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0"
+  },
+  "framer": {
+    "displayName": "Design starter kit",
+    "id": "a71ff609-353f-4cb2-8526-a5c3df2bbc5c"
+  },
+  "author": "Floris Verloop",
+  "dependencies": {
+    "styled-components": "^4.2.0"
+  },
+  "name": "@framer/framer.design-starter-kit",
+  "version": "1.0.0"
 }
