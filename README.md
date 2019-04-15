@@ -4,7 +4,7 @@ Framer Bridge is a suite of tools that allows you to automatically publish and d
 
 This repository links together [folder backed Framer projects](https://framer.gitbook.io/teams/integrations#folder-projects) with the [Framer CLI](https://www.npmjs.com/package/framer-cli) and [GitHub actions](https://github.com/framer/PublishAction)/[CircleCI](https://circleci.com/integrations/github/) for an easy package publication flow.
 
-## 🏁 Getting Started
+## 🏁 Getting started
 
 1. [Fork this repository](https://help.github.com/en/articles/fork-a-repo).
 1. [Clone the forked repository](https://help.github.com/en/articles/cloning-a-repository) locally.
