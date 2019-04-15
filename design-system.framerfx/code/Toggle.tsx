@@ -8,24 +8,23 @@ type Props = System.ToggleProps & {
 }
 
 type State = {
-  active?: boolean
+  on?: boolean
 }
 
 export class Toggle extends React.Component<Props, State> {
   state = {
-    active: false
+    on: false
   }
 
   handleClick = () => {
-    console.log("hallo")
-    this.setState({ active: !this.state.active })
+    this.setState({ on: !this.state.on })
   }
 
   render() {
     return (
       <System.Toggle
         {...this.props}
-        active={this.state.active}
+        on={this.state.on}
         onClick={this.handleClick}
       />
     )

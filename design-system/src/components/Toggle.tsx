@@ -7,17 +7,17 @@ export type Props = {
   /** Disable Toggle */
   disabled?: boolean
 
-  /** Set active state  */
-  active?: boolean
+  /** Set on state  */
+  on?: boolean
 
   /** Click handler */
   onClick?: React.MouseEventHandler<HTMLDivElement>
 }
 
 // Component
-export const Toggle: React.FC<Props> = ({ disabled, active, onClick }) => (
+export const Toggle: React.FC<Props> = ({ disabled, on, onClick }) => (
   <StyledToggle
-    className={`${disabled ? "disabled" : ""} ${active ? "active" : ""}`}
+    className={`${disabled ? "disabled" : ""} ${on ? "on" : ""}`}
     onClick={onClick}
   />
 )
@@ -25,7 +25,6 @@ export const Toggle: React.FC<Props> = ({ disabled, active, onClick }) => (
 // Styling
 const StyledToggle = styled.span`
   background: ${theme.color.paneBgDark};
-  border-radius: 100px;
   border-radius: 18px;
   box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.05),
     inset 0px 0px 0px 1px ${theme.color.paneBorder};
@@ -48,15 +47,14 @@ const StyledToggle = styled.span`
     left: 3px;
     background: ${theme.color.paneBg};
     transition: left 0.2s ease;
-    will-change: left;
     box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
       0px 1px 2px 0px hsla(0, 0%, 0%, 0.08);
   }
 
-  &.active {
+  &.on {
     background: ${theme.color.primary};
   }
-  &.active:before {
+  &.on:before {
     left: 31px;
   }
   &.disabled {
