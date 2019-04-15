@@ -54,6 +54,7 @@ const StyledInput = styled.input`
   padding: ${theme.space[3]};
   transition: box-shadow 0.2s;
   width: 100%;
+
   &:focus {
     box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.05),
       inset 0px 0px 0px 1px ${theme.color.primary},
@@ -70,6 +71,7 @@ const StyledInput = styled.input`
   }
 
   &.error {
+    color: ${theme.color.danger};
     box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.05),
       inset 0px 0px 0px 1px ${theme.color.danger};
   }
