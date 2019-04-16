@@ -1,5 +1,5 @@
 import * as React from "react"
-import * as System from "../../design-system/src"
+import * as System from "../../design-system"
 import { ControlType, PropertyControls } from "framer"
 
 type Props = System.InputProps & {
