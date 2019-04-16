@@ -68,7 +68,7 @@ If you have access to the [GitHub actions beta](https://github.com/features/acti
 
 ## 🚚 Using CI
 
-As an example of integrating `framer-cli` with an external CI service, there is a small [CircleCI configuration](https://circleci.com/docs/2.0/configuration-reference) included in this repository that builds the package on commit and publishes the given package to the [Framer store](https://store.framer.com) every time a commit is made to the `master` branch.
+As an example of integrating `framer-cli` with an external CI service, there is a small [CircleCI configuration](https://circleci.com/docs/2.0/configuration-reference) included in this repository that publishes the given package to the [Framer store](https://store.framer.com) every time a commit is made to the `master` branch.
 
 To integrate with CircleCI:
 
@@ -83,17 +83,6 @@ To integrate with CircleCI:
    #
    version: 2
    jobs:
-     build:
-       docker:
-         - image: circleci/node:10
-
-       working_directory: ~/repo
-
-       steps:
-         - checkout
-         - run: yarn
-         - run: npx framer-cli <your-project-path.framerfx> build
-
      publish:
        docker:
          - image: circleci/node:10
@@ -107,12 +96,10 @@ To integrate with CircleCI:
 
    workflows:
      version: 2
-     test-and-publish:
+     publish:
        jobs:
          - build
          - publish:
-             requires:
-               - build
              filters:
                branches:
                  only: master
