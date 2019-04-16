@@ -14,16 +14,20 @@ This repository links together [folder backed Framer projects](https://framer.gi
 1. Run `yarn` to install the design systems' dependencies.
 1. Copy your [folder backed project](https://framer.gitbook.io/teams/integrations#folder-projects) into the cloned directory or modify the existing [`design-system.framerfx`](/design-system.framerfx) file.
 1. From the terminal, run:
+
    ```sh
    npx framer-cli authenticate <your-framer-account-email>
    ```
+
    and follow the provided steps.
+
 1. **If the package has not been previously published to the store**, publish the package for the first time by running
+
    ```sh
    env FRAMER_TOKEN=<token> npx framer-cli publish <package-name.framerfx> --new="<Display Name>"
    ```
 
-### 🤖 Using GitHub actions
+## 🤖 Using GitHub actions
 
 If you have access to the [GitHub actions beta](https://github.com/features/actions), you can use this repository to automate the deployment of your Framer package to the store without needing any external services.
 
@@ -52,7 +56,7 @@ If you have access to the [GitHub actions beta](https://github.com/features/acti
 1. In GitHub, navigate to the forked repository and set the `FRAMER_TOKEN` via the GitHub UI for the [`.github/main.workflow`](/.github/main.workflow) publish step (accessible by navigating the file structure on the homepage of the repository).
 1. Push a commit to the `master` branch and watch as the GitHub actions pick up the commit, build the package, publish it to the [Framer Store](https://store.framer.com).
 
-### 🚚 Using CI
+## 🚚 Using CI
 
 As an example of integrating `framer-cli` with an external CI service, there is a small [CircleCI configuration](https://circleci.com/docs/2.0/configuration-reference) included in this repository that builds the package on commit and publishes the given package to the [Framer store](https://store.framer.com) every time a commit is made to the `master` branch.
 
