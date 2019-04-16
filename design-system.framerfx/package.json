@@ -2,21 +2,16 @@
   "main": "dist/index.js",
   "license": "MIT",
   "devDependencies": {
-    "@types/react": "^16.4.16"
+    "@types/react": "^16.4.16",
+    "framer": "^0.10"
   },
   "peerDependencies": {
     "framer": "^0.10",
     "react": "^16.3.0",
     "react-dom": "^16.3.0"
   },
-  "framer": {
-    "displayName": "Design starter kit",
-    "id": "a71ff609-353f-4cb2-8526-a5c3df2bbc5c"
-  },
-  "author": "Floris Verloop",
+  "version": "1.0.0",
   "dependencies": {
     "styled-components": "^4.2.0"
-  },
-  "name": "@framer/framer.design-starter-kit",
-  "version": "1.0.0"
+  }
 }
