@@ -45,7 +45,7 @@ If you have access to the [GitHub actions beta](https://github.com/features/acti
 
    ```sh
     action "Build" {
-      uses = "framer/actions/publish@master"
+      uses = "framer/actions/bridge@master"
       args = ["build", <your-project-path.framerfx>]
     }
 
@@ -56,7 +56,7 @@ If you have access to the [GitHub actions beta](https://github.com/features/acti
     }
 
     action "Publish" {
-      uses = "framer/actions/publish@master"
+      uses = "framer/actions/bridge@master"
       args = ["publish", <your-project-path.framerfx>, "--yes"]
       needs = ["Build", "Publish Filter"]
       secrets = ["FRAMER_TOKEN"]
