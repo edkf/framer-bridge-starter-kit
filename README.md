@@ -11,6 +11,7 @@ This repository links together [folder backed Framer projects](https://framer.gi
    - Inside the repository directory, there will be a [`design-system.framerfx`](/design-system.framerfx) Framer project, alongside a [`design-system`](/design-system) directory.
      - The [`design-system`](/design-system) directory contains example external components loaded inside the design system Framer project.
      - The [`design-system.framerfx`](/design-system.framerfx) [folder backed project](https://framer.gitbook.io/teams/integrations#folder-projects) contains a series of components ready for publication to the [Framer store](https://store.framer.com).
+1. Run `yarn` to install the design systems' dependencies.
 1. Copy your [folder backed project](https://framer.gitbook.io/teams/integrations#folder-projects) into the cloned directory or modify the existing [`design-system.framerfx`](/design-system.framerfx) file.
 1. From the terminal, run:
    ```sh
