@@ -45,7 +45,7 @@ If you have access to the [GitHub actions beta](https://github.com/features/acti
 
    ```sh
     action "Build" {
-      uses = "./.github/framer"
+      uses = "framer/actions/bridge@master"
       args = ["build", <your-project-path.framerfx>]
     }
 
@@ -56,7 +56,7 @@ If you have access to the [GitHub actions beta](https://github.com/features/acti
     }
 
     action "Publish" {
-      uses = "./.github/framer"
+      uses = "framer/actions/bridge@master"
       args = ["publish", <your-project-path.framerfx>, "--yes"]
       needs = ["Build", "Publish Filter"]
       secrets = ["FRAMER_TOKEN"]
@@ -64,11 +64,11 @@ If you have access to the [GitHub actions beta](https://github.com/features/acti
    ```
 
 1. In GitHub, navigate to the forked repository and set the `FRAMER_TOKEN` via the GitHub UI for the [`.github/main.workflow`](/.github/main.workflow) publish step (accessible by navigating the file structure on the homepage of the repository).
-1. Push a commit to the `master` branch and watch as the GitHub actions pick up the commit, build the package, publish it to the [Framer Store](https://store.framer.com).
+1. Push a commit to the `master` branch and watch as the GitHub actions pick up the commit, build the package, publish it to the [Framer Store](https://store.framer.com).
 
 ## 🚚 Using CI
 
-As an example of integrating `framer-cli` with an external CI service, there is a small [CircleCI configuration](https://circleci.com/docs/2.0/configuration-reference) included in this repository that builds the package on commit and publishes the given package to the [Framer store](https://store.framer.com) every time a commit is made to the `master` branch.
+As an example of integrating `framer-cli` with an external CI service, there is a small [CircleCI configuration](https://circleci.com/docs/2.0/configuration-reference) included in this repository that publishes the given package to the [Framer store](https://store.framer.com) every time a commit is made to the `master` branch.
 
 To integrate with CircleCI:
 
@@ -83,17 +83,6 @@ To integrate with CircleCI:
    #
    version: 2
    jobs:
-     build:
-       docker:
-         - image: circleci/node:10
-
-       working_directory: ~/repo
-
-       steps:
-         - checkout
-         - run: yarn
-         - run: npx framer-cli <your-project-path.framerfx> build
-
      publish:
        docker:
          - image: circleci/node:10
@@ -107,12 +96,10 @@ To integrate with CircleCI:
 
    workflows:
      version: 2
-     test-and-publish:
+     publish:
        jobs:
          - build
          - publish:
-             requires:
-               - build
              filters:
                branches:
                  only: master
