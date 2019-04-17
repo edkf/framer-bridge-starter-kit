@@ -11,12 +11,12 @@ action "Publish Filter" {
 }
 
 action "Build" {
-  uses = "framer/actions/bridge@master"
+  uses = "framer/bridge@master"
   args = ["build", "design-system.framerfx"]
 }
 
 action "Publish" {
-  uses = "framer/actions/bridge@master"
+  uses = "framer/bridge@master"
   args = ["publish", "design-system.framerfx", "--yes"]
   needs = ["Build", "Publish Filter"]
   secrets = ["FRAMER_TOKEN"]
